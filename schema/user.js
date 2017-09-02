@@ -73,6 +73,10 @@ module.exports = function (app, mongoose) {
         timeCreated: {
             type: Date,
             default: Date.now
+        },
+        profile: {
+            picture: String,
+            address: String
         }
     });
     userSchema.plugin(require('./plugins/pagedFind'));
