@@ -75,8 +75,14 @@ module.exports = function (app, mongoose) {
             default: Date.now
         },
         profile: {
-            picture: String,
-            address: String
+            picture: {
+                type: String,
+                default: ''
+            },
+            address: {
+                type: String,
+                default: ''
+            }
         }
     });
     userSchema.plugin(require('./plugins/pagedFind'));
